@@ -4,6 +4,9 @@
 <head>
     <title></title>
 
+    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
+
+
     <style type="text/css">
     	.circle{
 /*    		border-radius:50%;
@@ -11,15 +14,16 @@
     	}
 
     	#one{
-    		width:400px;
-            height:400px;
+    		width:234px;
+            height:259px;
             background-image: url("https://pngriver.com/wp-content/uploads/2018/04/Download-Golden-Retriever-Puppy-PNG-Transparent-Image-For-Designing-Projects.png");
             background-position: center;
-            background-size:contain; 
+            background-size:cover; 
             background-repeat: no-repeat;
             left:40%;
             top:30%;
-    	}
+/*            background-color:green;
+*/    	}
 
         #two{
             width:200px;
@@ -54,15 +58,53 @@
             left:60%;
             top:0%;
         }
+
+        #description-1{
+            width:300px;
+            height:300px;
+            background-color:white;
+            border:solid 1px;
+            opacity:0;
+            transition:2s;
+            font-family: 'Happy Monkey', cursive;
+            padding:10px;
+
+        }
     </style>
 </head>
 
 <body>
-    <a href="dog.html"><div id="one" class="circle"></div></a>
+    <a href="dog.html"><div id="one" class="circle"><div class="description" id="description-1">
+        
+        <p>This is a link to my first code sketch!!</p>
+    </div></div></a>
     <a href="other-page.html"> <div id="two" class="circle"></div></a>
-     <a href="other-page.html"><div id="three" class="circle"></div></a>
+     <a href="journal.html"><div id="three" class="circle" id="description-2">
+         
+         <p>This is a link to my coding journal where I recored my progress!</p>
+     </div></a>
     <a href="other-page.html"> <div id="four" class="circle"></div></a>
      <a href="other-page.html"><div id="five" class="circle"></div></a>
+
+     <script type="text/javascript">
+         
+         var puppy = document.getElementById("one");
+         var description1= document.getElementById("description-1");
+
+         description1.addEventListener("mouseenter", function(event){
+            description1.style.opacity = "0.6";
+            console.log(event)
+            
+
+         })
+
+          description1.addEventListener("mouseout", function(event){
+            description1.style.opacity = "0";
+            console.log(event)
+            
+
+         })
+     </script>
 </body>
 
 </html>
