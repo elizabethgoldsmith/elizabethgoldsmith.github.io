@@ -70,6 +70,17 @@
             padding:10px;
 
         }
+
+        #description-2{
+            width:49px;
+            height:49px;
+            background-color:white;
+            border:solid 1px;
+            opacity:0;
+            transition:2s;
+            font-family:'Happy Monkey', cursive;
+            padding:1px;
+        }
     </style>
 </head>
 
@@ -100,6 +111,20 @@
 
           description1.addEventListener("mouseout", function(event){
             description1.style.opacity = "0";
+            console.log(event)
+
+        var journal = document.getElementById("three");
+        var description2= document.getElementById("description-2");
+
+         description2.addEventListener("mouseenter", function(event){
+            description2.style.opacity = "0.6";
+            console.log(event)
+            
+
+         })
+
+          description2.addEventListener("mouseout", function(event){
+            description2.style.opacity = "0";
             console.log(event)
             
 
