@@ -3,133 +3,110 @@
 
 <head>
     <title></title>
-
     <link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
-
-
     <style type="text/css">
-    	.circle{
-/*    		border-radius:50%;
-*/            position:absolute;
-    	}
+    .circle {
+        /*          border-radius:50%;
+*/
+        position: absolute;
+    }
 
-    	#one{
-    		width:234px;
-            height:259px;
-            background-image: url("https://pngriver.com/wp-content/uploads/2018/04/Download-Golden-Retriever-Puppy-PNG-Transparent-Image-For-Designing-Projects.png");
-            background-position: center;
-            background-size:cover; 
-            background-repeat: no-repeat;
-            left:40%;
-            top:30%;
-/*            background-color:green;
-*/    	}
+    #one {
+        width: 234px;
+        opacity: 1;
+        height: 259px;
+        background-image: url("https://pngriver.com/wp-content/uploads/2018/04/Download-Golden-Retriever-Puppy-PNG-Transparent-Image-For-Designing-Projects.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 40%;
+        top: 30%;
+        z-index: 5;
+        /*            background-color:green;
+*/
+    }
 
-        #two{
-            width:200px;
-            height:200px;
-            background-color:lightgreen;
-            left:20%;
-            top:50%;
-        }
+    #description-1 {
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        border: solid 1px;
+        opacity: 0;
+        transition: 2s;
+        font-family: 'Happy Monkey', cursive;
+        padding: 10px;
+
+    }
 
 
-        #three{
-            width:50px;
-            height:50px;
-            background-color:rgba(148, 0, 211, 0.5);
-            left:20%;
-            top:10%;
-        }
+    #menu {
+        height: 800px;
+        width: 20%;
+        background-color: rgba(255, 193, 203, 0.5);
+        position:fixed;
+        font-size:4.5vw;
+        font-family: 'Happy Monkey', cursive;
 
-         #four{
-            width:30px;
-            height:30px;
-            background-color:rgba(250, 0, 100, 0.5);
-            left:70%;
-            top:80%;
-        }
 
-          #five{
-            width:250px;
-            height:250px;
-            background-color:magenta;
-            opacity:0.6;
-            left:60%;
-            top:0%;
-        }
+    }
 
-        #description-1{
-            width:300px;
-            height:300px;
-            background-color:white;
-            border:solid 1px;
-            opacity:0;
-            transition:2s;
-            font-family: 'Happy Monkey', cursive;
-            padding:10px;
+    body {
+        margin: 0;
 
-        }
+    }
 
-        #description-2{
-            width:49px;
-            height:49px;
-            background-color:white;
-            border:solid 1px;
-            opacity:0;
-            transition:2s;
-            font-family:'Happy Monkey', cursive;
-            padding:1px;
-        }
+    section {
+        background-color:white;
+/*        opacity: .5;
+*/        width: 100%;
+        height: 800px;
+        position: absolute;
+        border:dotted;
+
+
+    }
     </style>
 </head>
 
 <body>
-    <a href="dog.html"><div id="one" class="circle"><div class="description" id="description-1">
-        
-        <p>This is a link to my first code sketch!!</p>
-    </div></div></a>
-    <a href="other-page.html"> <div id="two" class="circle"></div></a>
-     <a href="journal.html"><div id="three" class="circle" id="description-2">
-         
-         <p>This is a link to my coding journal where I recored my progress!</p>
-     </div></a>
-    <a href="other-page.html"> <div id="four" class="circle"></div></a>
-     <a href="other-page.html"><div id="five" class="circle"></div></a>
+        <section id="first-page">
 
-     <script type="text/javascript">
-         
-         var puppy = document.getElementById("one");
-         var description1= document.getElementById("description-1");
+    <div id="menu">
+        <a href="">Projects</a>
+        <br>
+        <br>
+        <a href="journal.html">Journal</a>
 
-         description1.addEventListener("mouseenter", function(event){
-            description1.style.opacity = "0.6";
-            console.log(event)
-            
+    </div>
 
-         })
+    <a href="dog.html">
+        <div id="one" class="circle">
 
-          description1.addEventListener("mouseout", function(event){
-            description1.style.opacity = "0";
-            console.log(event)
 
-        var journal = document.getElementById("three");
-        var description2= document.getElementById("description-2");
+            <div class="description" id="description-1">
+                <p>This is a link to my first code sketch!!</p>
+            </div>
+        </div>
+</a>
+    </section>
 
-         description2.addEventListener("mouseenter", function(event){
-            description2.style.opacity = "0.6";
-            console.log(event)
-            
+    <script type="text/javascript">
+    var puppy = document.getElementById("one");
+    var description1 = document.getElementById("description-1");
 
-         })
+    description1.addEventListener("mouseenter", function(event) {
+        description1.style.opacity = "0.6";
+        console.log(event)
 
-          description2.addEventListener("mouseout", function(event){
-            description2.style.opacity = "0";
-            console.log(event)
-            
 
-         })
-     </script>
+    })
+
+    description1.addEventListener("mouseout", function(event) {
+                description1.style.opacity = "0";
+                console.log(event)
+
+                })
+    </script>
 </body>
 
 </html>
