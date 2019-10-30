@@ -1,19 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        background-color: lightpink;
 
-	<style>
-		#menu {
-			height: 1000px;
-			width: 1400px;
-			background-color: lightpink;
-			font-size:40px;
+    }
+
+    #menu {
+    	top:0%;
+    	background-color: lightblue;
+        height: 50px;
+        width: 100%;
+        font-size: 40px;
+        font-family: 'Happy Monkey', cursive;
+        position: fixed;
+    }
+
+    .candy {
+        background-position: center;
+        background-size: contain;
+        height: 200px;
+        width: 200px;
+        background-repeat: no-repeat;
+        z-index: 9;
+        position: relative;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    #sourpatch {
+
+        background-image: url(sourpatch.png);
+
+    }
+
+    #skittles {
+
+        background-image: url(skittles.png);
 
 
-	</style>
+
+    }
+
+    #mandm {
+
+        background-image: url(mandm.png);
+
+    }
+
+    #nerds {
+
+        background-image: url(nerds.png);
+
+    }
+
+    #mikeandike {
+
+        background-image: url(mikeandike.png);
+
+    }
+
+    #snowcaps {
+
+        background-image: url(snowcaps.png);
+
+
+    }
+
+    #swedishfish {
+
+        background-image: url(swedishfish.png);
+
+
+    }
+
+    #milkduds {
+
+        background-image: url(milkduds.png);
+
+
+    }
+
+    #sourpatchdrag {
+    	cursor: move;
+    	z-index: 10;
+    }
+    </style>
 </head>
+
 <body>
-	<div id="menu"></div>
+    <div id="menu">
+        <a>please select your candy and drag it into the cart!
+            <br>
+        </a>
+    </div>
+
+    <section id="homepage">
+    <div class="candy" id="sourpatch">
+    	<div id="sourpatchdrag"></div>
+    </div>
+    <div class="candy" id="skittles"> </div>
+    <div class="candy" id="mandm"></div>
+    <div class="candy" id="mikeandike"></div>
+    <div class="candy" id="snowcaps"></div>
+    <div class="candy" id="swedishfish"></div>
+    <div class="candy" id="milkduds"></div>
+    <div class="candy" id="nerds"></div>
+</section>
+
 </body>
+
 </html>
