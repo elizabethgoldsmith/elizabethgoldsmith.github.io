@@ -86,9 +86,19 @@
 
     }
 
-    #sourpatchdrag {
-    	cursor: move;
-    	z-index: 10;
+    #shoppingcart {
+    	background-image: url(shoppingcart.jpg);
+    	background-position: center;
+        background-size: contain;
+        height: 400px;
+        width: 400px;
+        background-repeat: no-repeat;
+        z-index: 9;
+        position: relative;
+        margin: 10px;
+        margin-top: 100px;
+
+
     }
     </style>
 </head>
@@ -101,6 +111,7 @@
     </div>
 
     <section id="homepage">
+    	<div id="shoppingcart"></div>
     <div class="candy" id="sourpatch">
     	<div id="sourpatchdrag"></div>
     </div>
@@ -111,8 +122,37 @@
     <div class="candy" id="swedishfish"></div>
     <div class="candy" id="milkduds"></div>
     <div class="candy" id="nerds"></div>
+    
 </section>
 
+<script type="text/javascript">
+var image;
+
+function makeCandy() {
+	var skitt = document.createElement("skittles");
+	skitt.style.width = "100px";
+	skitt.style.height = "100px";
+	skitt.style.position = "absolute";
+	skitt.style.backgroundSize = "contain"
+	skitt.style.backgroundRepeat = "no-repeat"
+	skitt.style.backgroundImage = "url(skittles.png)";
+
+shoppingcart.addEventListener("mousemove", function(event) {
+	console.log(event.clientX, event.clientY)
+
+	});
+
+
+shoppingcart.appendChild(skitt);
+
+skitt.style.left = event.clientX - 50 + "px";
+skitt.style.top = event.clientY - 100 + "px";
+
+};
+shoppingcart.addEventListener("click", makeCandy);
+
+
+</script>
 </body>
 
 </html>
