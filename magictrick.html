@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		.worm{
+			width:100px;
+			height:100px;
+			background-image:url(worm.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			display:inline-block;
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="worm"></div>
+	
+	<script type="text/javascript">
+		function makeWorm () {
+			var worm = document.createElement("div");
+			document.body.appendChild(worm);
+			worm.classList.add("worm");
+			worm.style.left = Math.round(Math.random()*1000)+"px";
+			worm.style.top = Math.round(Math.random()*1000)+"px";
+		}
+
+
+		for(var i=0;i<1000; i++){
+			makeWorm();
+		}
+
+	</script>
+</div>
+</body>
+</html>
