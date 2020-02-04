@@ -15,26 +15,50 @@
 
 		}
 
+		#clear {
+			width: 100px;
+			height: 100px;
+			background-image: url("clear.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+
+		}
+
 
 	</style>
 </head>
 <body>
 
-	<div class="worm"></div>
-	
+<!-- 	<div class="worm"></div>
+ -->	<div id="clear"></div>
 	<script type="text/javascript">
 		function makeWorm () {
 			var worm = document.createElement("div");
 			document.body.appendChild(worm);
 			worm.classList.add("worm");
-			worm.style.left = Math.round(Math.random()*1000)+"px";
+			worm.style.opacity = "100";
+
+			var clear = document.getElementById("clear")
+clear.addEventListener("click", function() {
+	worm.style.opacity = "0";
+})
+			function move ()
+			{worm.style.left = Math.round(Math.random()*1000)+"px";
 			worm.style.top = Math.round(Math.random()*1000)+"px";
+
+			};
+
+			setInterval(move, 100);
+
+
+			
 		}
 
 
 		for(var i=0;i<1000; i++){
 			makeWorm();
 		}
+
 
 	</script>
 </div>
