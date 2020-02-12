@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
+	<style type="text/css">
+		#teddy{
+			width:700px;
+			height:700px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		section {
+			background-color: pink;
+			width:100%;
+			height:100%;
+			border:dotted;
+			border-color: red;
+			font-family: 'Happy Monkey', cursive;
+			font-size:3.0vw;
+			z-index: 5;
+
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+<section id="page">
+
+<div id="teddy">
+	<a>click right under here to get a picture of Teddy to pop up! </a>
+</div>
+
+</section>
+	<script type="text/javascript">
+
+	var teddy = document.getElementById("teddy");
+	var teddys = ["url(teddy1.png)", "url(teddy2.png)", "url(teddy3.png)", "url(teddy4.png)", "url(teddy5.png)", "url(teddy6.png)", "url(teddy7.png)", "url(teddy8.png)", "url(teddy9.png)", "url(teddy10.png)"];
+
+	teddy.addEventListener("click", function(){randomNumber = Math.round(Math.random()*5)
+
+	teddy.style.backgroundImage = teddys[randomNumber]
+			console.log(event);
+	});
+		
+
+	</script>
+	}
+
+</body>
+</html>
